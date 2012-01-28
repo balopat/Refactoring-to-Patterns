@@ -50,4 +50,8 @@ public class Loan {
     public static Loan createTermLoan(CapitalStrategy riskAdjustedCapitalStrategy, double commitment, double outstanding,int riskTaking, Date maturity ) {
         return new Loan(riskAdjustedCapitalStrategy, commitment, outstanding, riskTaking, maturity, null);
     }
+
+    public static Loan createRevolver(CapitalStrategyRCTL capitalStrategy, double commitment, double outstanding, int riskRating, Date maturity, Date expiry) {
+        return new Loan(capitalStrategy, commitment, outstanding, riskRating, maturity, expiry);
+    }
 }

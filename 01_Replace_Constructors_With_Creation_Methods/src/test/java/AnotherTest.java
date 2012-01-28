@@ -60,7 +60,11 @@ public class AnotherTest {
     @Test
     public void testRevolverWithCapitalStrategy(){
         //...
-        Loan revolverLoan = new Loan(new CapitalStrategyRCTL(), commitment, outstanding, riskRating, null, expiry);
+        CapitalStrategyRCTL strategyRCTL = new CapitalStrategyRCTL();
+        Date maturityRctl = null;
+
+        Loan revolverLoan = Loan.createRevolver(strategyRCTL, commitment, outstanding, riskRating, maturityRctl, expiry);
         //...
     }
+
 }
