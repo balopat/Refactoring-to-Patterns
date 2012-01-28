@@ -32,7 +32,7 @@ public class AnotherTest {
     @Test
     public void testTermLoanWithNullExpiryPassed(){
         //...
-        Loan termLoan = new Loan(commitment, riskTaking, maturity,null);
+        Loan termLoan = Loan.createTermLoan(commitment, riskTaking, maturity);
         //...
     }
     
