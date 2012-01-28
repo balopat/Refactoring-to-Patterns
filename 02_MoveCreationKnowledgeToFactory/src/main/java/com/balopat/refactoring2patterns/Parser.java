@@ -1,14 +1,13 @@
 package com.balopat.refactoring2patterns;
 
 public class Parser {
-    private boolean shouldDecode;
+    private StringNodeParsingOption stringNodeParsingOption = new StringNodeParsingOption();
 
-    public void setNodeDecoding(boolean shouldDecode){
-        this.shouldDecode = shouldDecode;
+    public StringNodeParsingOption getStringNodeParsingOption() {
+        return stringNodeParsingOption;
     }
 
-    public boolean shouldDecodeNodes(){
-        return shouldDecode;
+    public void setStringNodeParsingOption(StringNodeParsingOption stringNodeParsingOption) {
+        this.stringNodeParsingOption = stringNodeParsingOption;
     }
-
 }

@@ -9,7 +9,12 @@ public class StringParser {
     public Node findNode(/* ... */){
         /* ... */
         NodeFactory nodeFactory = new NodeFactory();
-        return nodeFactory.createStringNode(textBuffer, textBegin, textEnd, parser.shouldDecodeNodes());
+        return nodeFactory.createStringNode(
+                textBuffer,
+                textBegin,
+                textEnd,
+                parser.getStringNodeParsingOption().shouldDecodeStringNodes()
+        );
         /* ... */     
     }
 }
