@@ -18,7 +18,7 @@ public class AnotherTest {
     @Test
     public void testTermLoanNoPayments() {
         //...
-        Loan termLoan = new Loan(commitment, riskTaking, maturity);
+        Loan termLoan = Loan.createTermLoan(commitment, riskTaking, maturity);
         //...
     }
 
