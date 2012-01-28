@@ -1,14 +1,10 @@
-import com.balopat.refactoring2patterns.CapitalStrategy;
 import com.balopat.refactoring2patterns.Loan;
 import org.junit.Test;
 
-import java.util.Calendar;
 import java.util.Date;
 
-public class CapitalCalculationTests {
+public class AnotherTest {
 
-
-    
 
     @Test
     public void testTermLoanNoPayments() {
@@ -30,16 +26,5 @@ public class CapitalCalculationTests {
 
         Loan termLoan = new Loan(commitment, riskTaking, maturity);
 
-    }
-
-    @Test
-    public void testTermLoanWithRiskAdjustedCapitalStrategy(){
-        double commitment = 50.00;
-        int riskTaking = 20;
-        Date maturity = new Date();
-        CapitalStrategy riskAdjustedCapitalStrategy = null;
-        double outstanding = 79.00;
-
-        Loan termLoan = new Loan(riskAdjustedCapitalStrategy, commitment, outstanding, riskTaking, maturity, null);
     }
 }
