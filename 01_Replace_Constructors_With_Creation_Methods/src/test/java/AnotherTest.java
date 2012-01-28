@@ -25,7 +25,7 @@ public class AnotherTest {
     @Test
     public void testTermLoanOnePayment() {
         //...
-        Loan termLoan = new Loan(commitment, riskTaking, maturity);
+        Loan termLoan = Loan.createTermLoan(commitment,riskTaking, maturity);
         //...
     }
 
@@ -50,14 +50,12 @@ public class AnotherTest {
         //...
     }
 
-
     @Test
     public void testRevolver(){
         //...
         Loan revolverLoan = new Loan(commitment, outstanding, riskRating, null, expiry);
         //...
     }
-
 
     @Test
     public void testRevolverWithCapitalStrategy(){
