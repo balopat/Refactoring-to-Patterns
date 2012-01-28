@@ -47,11 +47,15 @@ public class Loan {
         return new Loan(riskAdjustedCapitalStrategy, commitment, outstanding, riskTaking, maturity, null);
     }
 
-    public static Loan createRevolver(CapitalStrategyRCTL capitalStrategy, double commitment, double outstanding, int riskRating, Date maturity, Date expiry) {
-        return new Loan(capitalStrategy, commitment, outstanding, riskRating, maturity, expiry);
+    public static Loan createRevolver(CapitalStrategyRCTL capitalStrategy, double commitment, double outstanding, int riskRating, Date expiry) {
+        return new Loan(capitalStrategy, commitment, outstanding, riskRating, null, expiry);
     }
 
     public static Loan createRCTL(double commitment, Date maturity, CapitalStrategy capitalStrategy, double outstanding, int riskRating, Date expiry) {
         return new Loan(capitalStrategy, commitment, outstanding, riskRating, maturity, expiry);
+    }
+
+    public static Loan createRevolver(double commitment, double outstanding, int riskRating, Date expiry) {
+        return new Loan(commitment, outstanding, riskRating, null, expiry);
     }
 }

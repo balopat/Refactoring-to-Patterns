@@ -53,7 +53,7 @@ public class AnotherTest {
     @Test
     public void testRevolver(){
         //...
-        Loan revolverLoan = new Loan(commitment, outstanding, riskRating, null, expiry);
+        Loan revolverLoan = Loan.createRevolver(commitment, outstanding, riskRating, expiry);
         //...
     }
 
@@ -63,7 +63,7 @@ public class AnotherTest {
         CapitalStrategyRCTL strategyRCTL = new CapitalStrategyRCTL();
         Date maturityRctl = null;
 
-        Loan revolverLoan = Loan.createRevolver(strategyRCTL, commitment, outstanding, riskRating, maturityRctl, expiry);
+        Loan revolverLoan = Loan.createRevolver(strategyRCTL, commitment, outstanding, riskRating, expiry);
         //...
     }
 
