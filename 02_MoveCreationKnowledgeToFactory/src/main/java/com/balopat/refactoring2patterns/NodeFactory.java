@@ -1,9 +1,9 @@
 package com.balopat.refactoring2patterns;
 
-public class StringNodeParsingOption {
+public class NodeFactory {
     private boolean shouldDecodeStringNodes;
 
-    public StringNodeParsingOption() {
+    public NodeFactory() {
     }
 
     public void setShouldDecodeStringNodes(boolean shouldDecodeStringNodes) {

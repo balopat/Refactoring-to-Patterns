@@ -8,7 +8,7 @@ public class StringParser {
 
     public Node findNode(/* ... */){
         /* ... */
-        return parser.getStringNodeParsingOption().createStringNode(
+        return parser.getNodeFactory().createStringNode(
                 textBuffer,
                 textBegin,
                 textEnd

@@ -1,13 +1,13 @@
 package com.balopat.refactoring2patterns;
 
 public class Parser {
-    private StringNodeParsingOption stringNodeParsingOption = new StringNodeParsingOption();
+    private NodeFactory nodeFactory = new NodeFactory();
 
-    public StringNodeParsingOption getStringNodeParsingOption() {
-        return stringNodeParsingOption;
+    public NodeFactory getNodeFactory() {
+        return nodeFactory;
     }
 
-    public void setStringNodeParsingOption(StringNodeParsingOption stringNodeParsingOption) {
-        this.stringNodeParsingOption = stringNodeParsingOption;
+    public void setNodeFactory(NodeFactory nodeFactory) {
+        this.nodeFactory = nodeFactory;
     }
 }
