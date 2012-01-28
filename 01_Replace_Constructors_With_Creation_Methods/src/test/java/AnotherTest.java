@@ -39,12 +39,8 @@ public class AnotherTest {
     @Test
     public void testRCTL(){
         //...
-        Loan rctlLoan = createRCTL(commitment, maturity, capitalStrategy, outstanding, riskRating, expiry);
+        Loan rctlLoan = Loan.createRCTL(commitment, maturity, capitalStrategy, outstanding, riskRating, expiry);
         //...
-    }
-
-    public static Loan createRCTL(double commitment, Date maturity, CapitalStrategy capitalStrategy, double outstanding, int riskRating, Date expiry) {
-        return new Loan(capitalStrategy, commitment, outstanding, riskRating, maturity, expiry);
     }
 
     @Test
