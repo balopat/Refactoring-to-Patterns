@@ -8,12 +8,10 @@ public class StringParser {
 
     public Node findNode(/* ... */){
         /* ... */
-        NodeFactory nodeFactory = new NodeFactory();
-        return nodeFactory.createStringNode(
+        return parser.getStringNodeParsingOption().createStringNode(
                 textBuffer,
                 textBegin,
-                textEnd,
-                parser.getStringNodeParsingOption().shouldDecodeStringNodes()
+                textEnd
         );
         /* ... */     
     }
