@@ -17,7 +17,7 @@ public class CapitalCalculationTests {
     @Test
     public void testTermLoanNoPayments() {
         //...
-        Loan termLoan = new Loan(commitment, riskTaking, maturity);
+        Loan termLoan = createTermLoan(commitment, riskTaking, maturity);
         //...
     }
 
@@ -33,5 +33,9 @@ public class CapitalCalculationTests {
         //...
         Loan termLoan = new Loan(riskAdjustedCapitalStrategy, commitment, outstanding, riskTaking, maturity, null);
         //...
+    }
+
+    public static Loan createTermLoan(double commitment, int riskTaking, Date maturity) {
+        return new Loan(commitment, riskTaking, maturity);
     }
 }
