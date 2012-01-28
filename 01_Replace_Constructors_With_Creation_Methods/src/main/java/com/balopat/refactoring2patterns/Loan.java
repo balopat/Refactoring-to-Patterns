@@ -12,9 +12,6 @@ public class Loan {
     private Date expiry;
     private CapitalStrategy capitalStrategy;
 
-    public Loan(double commitment, int riskRating, Date maturity) {
-        this(commitment, 0.00, riskRating, maturity, null);
-    }
     public Loan(double commitment, int riskRating, Date maturity, Date expiry) {
         this(commitment, 0.00, riskRating, maturity, expiry);
     }
@@ -47,6 +44,6 @@ public class Loan {
     }
 
     public static Loan createTermLoan(double commitment, int riskTaking, Date maturity) {
-        return new Loan(commitment, riskTaking, maturity);
+        return new Loan(commitment, riskTaking, maturity, null);
     }
 }
