@@ -47,7 +47,7 @@ public class Loan {
         return new Loan(commitment, riskTaking, maturity, null);
     }
 
-    public static Loan createTermLoan(double commitment, int riskTaking, Date maturity, CapitalStrategy riskAdjustedCapitalStrategy, double outstanding) {
+    public static Loan createTermLoan(CapitalStrategy riskAdjustedCapitalStrategy, double commitment, double outstanding,int riskTaking, Date maturity ) {
         return new Loan(riskAdjustedCapitalStrategy, commitment, outstanding, riskTaking, maturity, null);
     }
 }

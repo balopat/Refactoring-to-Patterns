@@ -31,7 +31,7 @@ public class CapitalCalculationTests {
     @Test
     public void testTermLoanWithRiskAdjustedCapitalStrategy(){
         //...
-        Loan termLoan = Loan.createTermLoan(commitment, riskTaking, maturity, riskAdjustedCapitalStrategy, outstanding);
+        Loan termLoan = Loan.createTermLoan(riskAdjustedCapitalStrategy,commitment, outstanding, riskTaking, maturity);
         //...
     }
 }
