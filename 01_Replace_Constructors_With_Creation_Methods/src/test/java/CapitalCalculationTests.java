@@ -31,11 +31,7 @@ public class CapitalCalculationTests {
     @Test
     public void testTermLoanWithRiskAdjustedCapitalStrategy(){
         //...
-        Loan termLoan = new Loan(riskAdjustedCapitalStrategy, commitment, outstanding, riskTaking, maturity, null);
+        Loan termLoan = Loan.createTermLoan(commitment, riskTaking, maturity, riskAdjustedCapitalStrategy, outstanding);
         //...
-    }
-
-    public static Loan createTermLoan(double commitment, int riskTaking, Date maturity) {
-        return new Loan(commitment, riskTaking, maturity);
     }
 }
