@@ -46,7 +46,8 @@ public class AnotherTest {
     @Test
     public void testRCTLWithNullCapitalStrategyAndNoOutstanding(){
         //...
-        Loan rctlLoan = new Loan(null, commitment, riskRating, maturity, expiry);
+        CapitalStrategy capitalStrategyRctl = null;
+        Loan rctlLoan = Loan.createRCTL(capitalStrategyRctl, commitment, riskRating, maturity, expiry);
         //...
     }
 
