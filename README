@@ -5,7 +5,7 @@ Each pattern is in it's own folder.
 Each of them is a separate Maven module. 
 
 The solution, is on each branch, named similarly as the folder. 
-You can easily compare them using github-s compare tool on the branch. 
+You can easily compare them using github's compare tool on the branch. 
 
 Good luck, hope it helps, give me a comment if you found it useful! 
 
